@@ -27,6 +27,8 @@
     <input type = "text"  [(ngModel)]='user.address' >
     <br>
 
+    <span *ngIf='validationMessage' >*{{validationMessage}}</span>
+    <br>
 
     <button (click)='onClickRegister()'>Register</button>
 </div>
