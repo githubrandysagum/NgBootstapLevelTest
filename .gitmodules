@@ -1,0 +1,3 @@
+[submodule "app/xbase-api"]
+	path = app/xbase-api
+	url = https://github.com/thruthesky/xbase-api.git

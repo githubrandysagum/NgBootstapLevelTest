@@ -1,0 +1,12 @@
+<div  *ngIf="users">
+    <ul>
+        <li *ngFor = "let user of users">
+            <label>Name :</label> 
+            <span>{{ user.name }}</span><br>
+            <label>Email : </label>
+            <span> {{ user.email }} </span><br>
+            <label>Gender:</label>
+            <span>{{ user.gender }}</span>
+        </li>
+    </ul>
+</div>
