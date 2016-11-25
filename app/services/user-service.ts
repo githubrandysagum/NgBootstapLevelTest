@@ -21,9 +21,7 @@ export class UserService {
         let body = {
             'mc': 'user.fetch'
             
-        }
-
-       
+        }    
         this.http.post(this.url, this.http_build_query(body), this.options)
             .subscribe(res => {
                let users =  JSON.parse(res['_body']).data;  
@@ -31,6 +29,18 @@ export class UserService {
                successCallBack(users);
             })
     }
+
+    register_user(data : USER){
+        data['mc'] = 'user.register';
+        this.http.post(this.url, this.http_build_query(data), this.options)
+            .subscribe(res => {      
+                 console.log('Successfull', res)
+            })
+
+
+    }
+
+
 
 
     

@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { USER } from '../../interfaces/user';
+import { UserService } from '../../services/user-service';
 
 @Component({
     moduleId : module.id,
@@ -9,13 +10,16 @@ import { USER } from '../../interfaces/user';
 
 
 export class UserRegisterComponent{
-   
     user : USER = <USER>{};
    
+
+    constructor(private userService : UserService){
+
+    }
     onClickRegister(){
         
-        
-        console.log(this.user);
+        this.userService.register_user(this.user);
+       
     }
 
 
