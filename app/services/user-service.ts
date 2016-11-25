@@ -33,43 +33,7 @@ export class UserService {
     }
 
 
-    users :Array<USER> =  [{   'id': '1',
-        'name': 'Randy Sagum',
-        'email': 'randy.sagum@xbase.com',
-        'gender': 'M'
-    },
-     {   'id': '2',
-        'name': 'Manuel Manansala',
-        'email': 'manuel.manansaala@xbase.com',
-        'gender': 'M'
-    }
-    ,
-     {   'id': '3',
-        'name': 'Steven Nonato',
-        'email': 'steven.nonato@xbase.com',
-        'gender': 'M'
-    }
-    ,
-     {   'id': '4',
-        'name': 'Rowell David',
-        'email': 'rowell.david@xbase.com',
-        'gender': 'M'
-    }
-    ,
-     {   'id': '5',
-        'name': 'Charles Pineda',
-        'email': 'charles.pineda@xbase.com',
-        'gender': 'M'
-    }
-    ,
-     {   'id': '6',
-        'name': 'Jaeho Song',
-        'email': 'jaeho.song@xbase.com',
-        'gender': 'M'
-    }
-   
-];
-
+    
 
 http_build_query (formdata : any, numericPrefix='', argSeparator='') { 
         var urlencode = this.urlencode;

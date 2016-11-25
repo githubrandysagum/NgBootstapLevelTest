@@ -2,11 +2,12 @@ import { NgModule }      from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { AppComponent }  from './app.component';
 import { FormsModule }   from '@angular/forms';
-
+import { HttpModule }    from '@angular/http';
 import { UserService } from './services/user-service';
 
 import { UserListComponent } from './pages/user-list/user-list.component';
-import { HttpModule }    from '@angular/http';
+import { UserRegisterComponent } from './pages/user-register/user-register.component'
+
 
 @NgModule({
   imports: [ 
@@ -16,7 +17,8 @@ import { HttpModule }    from '@angular/http';
   ],
   declarations: [ 
     AppComponent,
-    UserListComponent
+    UserListComponent,
+    UserRegisterComponent
   ],
   providers: [
     UserService

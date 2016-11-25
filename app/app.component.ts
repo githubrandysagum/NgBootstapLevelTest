@@ -6,7 +6,7 @@ import { Component } from '@angular/core';
   selector: 'my-app',
  template: `
   <h1>Users</h1>
-  <user-list></user-list>
+ <user-register></user-register>
   `
 
 })
