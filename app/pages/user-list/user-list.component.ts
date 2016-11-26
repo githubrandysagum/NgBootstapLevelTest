@@ -15,8 +15,10 @@ export class UserListComponent{
     users : Array<USER>;
 
     constructor(private userService : UserService){
-        this.userService.search_users(response => {
+        this.userService.user_search({},response => {
                 this.users = response;
+            },e=>{
+
             });  
             
     }

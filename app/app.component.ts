@@ -5,8 +5,10 @@ import { Component } from '@angular/core';
   
   selector: 'my-app',
  template: `
-  <h1>Users</h1>
- <user-register></user-register>
+  <div class='container'>
+    <modal></modal>
+  </div>
+ 
   `
 
 })

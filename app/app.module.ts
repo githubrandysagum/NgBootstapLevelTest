@@ -4,9 +4,11 @@ import { AppComponent }  from './app.component';
 import { FormsModule }   from '@angular/forms';
 import { HttpModule }    from '@angular/http';
 import { UserService } from './services/user-service';
+import {NgbModule} from '@ng-bootstrap/ng-bootstrap';
 
 import { UserListComponent } from './pages/user-list/user-list.component';
 import { UserRegisterComponent } from './pages/user-register/user-register.component'
+import { ModalComponent } from './pages/modal/modal.component';
 
 
 @NgModule({
@@ -14,11 +16,13 @@ import { UserRegisterComponent } from './pages/user-register/user-register.compo
     BrowserModule,
     FormsModule,
     HttpModule,
+    NgbModule.forRoot()
   ],
   declarations: [ 
     AppComponent,
     UserListComponent,
-    UserRegisterComponent
+    UserRegisterComponent,
+    ModalComponent
   ],
   providers: [
     UserService
