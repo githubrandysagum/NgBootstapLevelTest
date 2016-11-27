@@ -1,5 +1,5 @@
-import { Component } from '@angular/core';
-import { USER } from '../../interfaces/user';
+import { Component, OnInit } from '@angular/core';
+import { UserFormValid } from '../../interfaces/user-form-valid';
 import { UserService } from '../../services/user-service';
 
 
@@ -11,31 +11,58 @@ import { UserService } from '../../services/user-service';
 
 
 
-export class UserRegisterComponent{
-    user : USER = <USER>{};
-   
+export class UserRegisterComponent implements OnInit{
+    alertMessage = "";
+    alertClass = "";
+    form : UserFormValid = new UserFormValid();
     constructor(private userService : UserService){
-
+          
     }
-    onClickRegister(){
-        
 
-        
-        this.userService.user_register(this.user,  response => {
-            
-            console.log("Login success!")
 
+   ngOnInit(){
+        this.validate_setsRequired();
+        this.validate_setRegex();
+   }
+
+     onClickRegister(){    
+         
+        if(!this.form.isValid()){ 
+            this.alertMessage = "*Please fill the form correctly"; 
+            this.alertClass = "alert-warning";
+             return;
+            }
+           
+        this.userService.user_register(this.form.user,  response => {          
+            this.alertMessage = "Login success!";
+            this.alertClass = "alert-success";
         },error =>{
-            alert ('Error: Please report this to admin!'+ error);
+           this.alertMessage =  ' Server says : '+ error;
+           this.alertClass = "alert-danger";
         });
        
     }
 
 
-   
 
-    
+    validate_setRegex(){
+        this.form.setRegex('email',
+             new RegExp(/(.+)@(.+){2,}\.(.+){2,}/) ,
+             "Email is malformed");
+        this.form.setRegex('password',
+             new RegExp(/^(?=.*[A-Za-z])(?=.*\d)[A-Za-z\d]{8,}$/) ,
+            "Password must contain minimum 8 characters at least 1 Alphabet and 1 Number"
+        )     
+    }
 
+    validate_setsRequired(){
 
+        this.form.setRequired('id', "Username is Required");
+        this.form.setRequired('name', "Name is Required");
+        this.form.setRequired('password', "Password is Required");
+        this.form.setRequired('email', "Email is Required");
+        this.form.setRequired('address', "Address is Required");
+
+    }
 
 }

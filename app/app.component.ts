@@ -6,12 +6,15 @@ import { Component } from '@angular/core';
   selector: 'my-app',
  template: `
   <div class='container'>
-    <modal></modal>
+    <nav>
+      <a>Home</a>
+    </nav>
+    <user-register></user-register>
   </div>
  
   `
 
 })
 export class AppComponent  {
-
+    
  }

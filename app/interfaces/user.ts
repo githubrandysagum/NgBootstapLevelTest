@@ -1,18 +1,18 @@
-export interface USER{
-    id : string,
-    email : string,
-    name : string,
-    gender : string,
-    address : string,
-    birthday: string,
-    city : string,
-    country : string,
-    mobile : string,
-    landline : string,
-    nickname : string,
-    password : string,
-    primary_photo : string,
-    profile : string,
-    province : string,
-    updated : string
+export class USER{
+    id : '';
+    email : '';
+    name : '';
+    gender : '';
+    address : '';
+    birthday: '';
+    city : '';
+    country : '';
+    mobile : '';
+    landline : '';
+    nickname : '';
+    password :'';
+    primary_photo : '';
+    profile : '';
+    province :'';
+    updated : '';
 }
