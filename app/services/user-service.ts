@@ -73,6 +73,7 @@ export class UserService {
     }
 
 
+    
     /**
      * @attention it saves user's session id in storage.
      *      the key is 'xbase-session-id'.

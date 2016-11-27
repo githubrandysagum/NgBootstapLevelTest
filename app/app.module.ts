@@ -8,6 +8,7 @@ import {NgbModule} from '@ng-bootstrap/ng-bootstrap';
 
 import { UserListComponent } from './pages/user-list/user-list.component';
 import { UserRegisterComponent } from './pages/user-register/user-register.component'
+import { UserLoginComponent } from './pages/user-login/user-login.component'
 import { ModalComponent } from './pages/modal/modal.component';
 
 
@@ -22,6 +23,7 @@ import { ModalComponent } from './pages/modal/modal.component';
     AppComponent,
     UserListComponent,
     UserRegisterComponent,
+    UserLoginComponent,
     ModalComponent
   ],
   providers: [

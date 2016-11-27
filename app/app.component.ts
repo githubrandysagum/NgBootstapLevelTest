@@ -9,6 +9,7 @@ import { Component } from '@angular/core';
     <nav>
       <a>Home</a>
     </nav>
+    <user-login></user-login>
     <user-register></user-register>
   </div>
  
