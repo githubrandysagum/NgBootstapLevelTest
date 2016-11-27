@@ -16,9 +16,11 @@ export class UserListComponent{
 
     constructor(private userService : UserService){
         this.userService.user_search({},response => {
-                this.users = response;
-            },e=>{
 
+            console.log(response);
+                this.users = response.rows;
+            },e=>{
+                alert(e);
             });  
             
     }
