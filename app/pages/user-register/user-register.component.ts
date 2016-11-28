@@ -43,6 +43,27 @@ export class UserRegisterComponent implements OnInit{
        
     }
 
+    onChangeFile(event : any) {
+        let file = event.target.files[0];
+        if ( file === void 0 ) return;
+        console.log('onChangeFile(): file: ', file);
+       // this.file_upload_begin = true;
+                  //this.position = 50;
+                  //this.urlPhoto = file.name;
+      //  let ref = this.getReferenceOfPrimaryPhoto( file.name );
+     //   this.firebaseStorage.upload( { file: file, ref: ref }, uploaded => {
+        //    this.onFileUploaded( uploaded.url, uploaded.ref );
+      //  },
+        // e => {
+        //     this.file_upload_begin = false;
+        //     alert(e);
+        // },
+        // percent => {
+        //     this.file_upload_position = percent;
+        //     console.log('percent: ' + this.file_upload_position);
+        //     this.renderPage();
+        // });
+    }
 
 
     validate_setRegex(){

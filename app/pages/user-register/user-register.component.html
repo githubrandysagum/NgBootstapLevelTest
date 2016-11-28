@@ -5,6 +5,12 @@
 
 <form>
 
+
+
+    <div class="form-group">
+        <label>Photo</label>   
+        <input type="file" (change)="onChangeFile($event)">
+  </div>
   <div class="form-group">
         <label>Username/Id: </label>   
         <input type = "text" class="form-control" [(ngModel)]='form.user.id' name = 'id'>  

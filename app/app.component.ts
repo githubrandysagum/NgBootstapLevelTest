@@ -9,7 +9,7 @@ import { Component } from '@angular/core';
     <nav>
       <a>Home</a>
     </nav>
-    <modal></modal>
+    <user-register></user-register>
     <template ngbModalContainer></template>
     
   </div>
