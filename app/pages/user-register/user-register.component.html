@@ -42,9 +42,26 @@
   </div>
 
   <div class="form-group">
-      <label>Gender: </label>
-      <input type = "text" class="form-control " [(ngModel)]='form.user.gender' name = 'gender'>
-      <span *ngIf = "form.ValidMessage['gender']" class='text-danger'> *{{ form.ValidMessage['gender'] }} </span>   
+      <label for="gender">Gender: </label>
+      <div [(ngModel)]="form.user.gender" ngbRadioGroup name="gender">
+        <label class="btn btn-primary btn-xs">
+            <input type="radio" value="M"> M
+        </label>
+        <label class="btn btn-primary btn-xs">
+            <input type="radio" value="F"> F
+        </label>
+     </div>
+    
+  </div>
+
+  <div class="form-group">
+      <label>Birth date: </label>
+      <div class="input-group">
+        <input class="form-control" placeholder="yyyy-mm-dd" name="dp" [(ngModel)]="birthdate" ngbDatepicker #d="ngbDatepicker">
+        <div class="input-group-addon" (click)="d.toggle()" >       
+            <img src="img/calendar-icon.svg" style="width: 1.2rem; height: 1rem; cursor: pointer;"/>
+        </div>
+    </div>
   </div>
 
   <div class="form-group">

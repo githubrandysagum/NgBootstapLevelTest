@@ -12,6 +12,7 @@ import { UserService } from '../../services/user-service';
 
 
 export class UserLoginComponent  implements OnInit{
+  
     form : UserFormValid = new UserFormValid();
     alertMessage = "";
     alertClass = "";

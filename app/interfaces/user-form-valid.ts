@@ -44,6 +44,12 @@ export class UserFormValid {
         });
     }  
 
+    //method to use to set property as required
+     setRequired(key : string, message : string) {    
+            this.required.push( new Required( key,  message, true));
+            
+     }   
+
     private validateRegex( key : string , regex : RegExp) : boolean{
         if(regex.test(this.user[key])) return true
         else return false;
@@ -68,11 +74,7 @@ export class UserFormValid {
 /****   Required validator **************/
 
 
-    //method to use to set property as required
-     setRequired(key : string, message : string) {    
-            this.required.push( new Required( key,  message, true));
-            
-     }       
+        
    
      //method that validate property if required
     private validateRequired( key : string ) : boolean{
@@ -96,7 +98,7 @@ export class UserFormValid {
          this.valid = valid;
      }
 
-////////////////////////////////////////////////////////////////////////////
+
 
      isValid() : any {
          this.valid = true;

@@ -15,14 +15,20 @@ export class UserRegisterComponent implements OnInit{
     alertMessage = "";
     alertClass = "";
     form : UserFormValid = new UserFormValid();
+    birthdate = {
+            "year": 2016,
+            "month": 11,
+            "day": 18
+        }
+
     constructor(private userService : UserService){
-          
+          this.form.user.gender = "M";
     }
 
 
    ngOnInit(){
         this.validate_setsRequired();
-        this.validate_setRegex();
+        this.validate_setRegex();    
    }
 
      onClickRegister(){    
@@ -37,8 +43,8 @@ export class UserRegisterComponent implements OnInit{
             this.alertMessage = "Login success!";
             this.alertClass = "alert-success";
         },error =>{
-           this.alertMessage =  ' Server says : '+ error;
-           this.alertClass = "alert-danger";
+            this.alertMessage =  ' Server says : '+ error;
+            this.alertClass = "alert-danger";
         });
        
     }
